@@ -1,0 +1,65 @@
+! xterm configurations
+xterm.vt100.locale: true
+!xterm.vt100.geometry: 92x28
+
+! enable alt key to work
+xterm.vt100.metaSendsEscape: true
+xterm.vt100.altSendsEscape: true
+xterm.vt100.eightBitInput: false
+
+!xterm.vt100.ScrollBar: true
+xterm.vt100.faceName: Dejavu Sans Mono
+xterm.vt100.faceSize: 14
+xterm.vt100.faceNameDoublesize: WenQuanYi Microhei Mono
+
+! VT Font Menu: Unreadable
+xterm.vt100.faceSize1: 8
+! VT font menu: Tiny
+xterm.vt100.faceSize2: 12
+! VT font menu: Medium
+xterm.vt100.faceSize3: 14
+! VT font menu: Large
+xterm.vt100.faceSize4: 16
+! VT font menu: Huge
+xterm.vt100.faceSize5: 20
+xterm.vt100.allowBoldFonts: true
+xterm.vt100.xftAntialias:   true
+
+!! Keybinding ========================================================
+! - change fontsize on the fly (ctrl+plus = increase ; ctrl+minus = decrease, ctrl+0 = default)
+! - copy/paste hotkey (ctrl+shift+c = copy ; ctrl+shift+v = paste)
+! - open url (clickable links)
+!   1) double click to highlight the full url
+!   2) Shift + click it to open it
+xterm.vt100.translations: #override \n\
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font() \n\
+  Ctrl <Key> 0: set-vt-font(d) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) \n\
+  <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+  <Btn2Up>: insert-selection(PRIMARY)
+
+! enable copy/paste hotkey to work (shift+insert = paste ; mouse highlight = copy)
+xterm.vt100.selectToClipboard: true
+
+! color theme (copied from i3 blackarch config)
+xterm*background: #000000
+xterm*foreground: #ccccee
+*color0: #09070F
+*color1: #CC0000
+*color2: #E49A06
+*color3: #C4A000
+*color4: #3465A4
+*color5: #75507B
+*color6: #06989A
+*color7: #D3D7CF
+*color8: #555753
+*color9: #EF2929
+*color10: #8A23E4
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #34E2E2
+*color15: #EEEEEC
