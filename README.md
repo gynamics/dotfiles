@@ -1,11 +1,11 @@
 # dotfiles
 Some personal user configuration files
 
-- .Xresources
+- `.Xresources`
   this includes xterm configurations
-- .Xdefaults
+- `.Xdefaults`
   this includes urxvt configurations, however, perl scripts seems to have been deprecated
-- .zshrc
+- `.zshrc`
   to use it you need to make some configurations:
   - if you want to display host ip & login ip information in `RPROMPT`
     make sure you have `coreutils` and `ineutils` installed.
@@ -18,7 +18,7 @@ Some personal user configuration files
   - about zsh scripts
     - `gitneko.zsh` can be found in `gynamics/zsh-gitneko`
     - `dirstack.zsh` can be found in `gynamics/zsh-dirstack`
-- .vimrc
+- `.vimrc`
   install `vim-plug` to install plugins
   
 If you have any other questions, ask me for free!
