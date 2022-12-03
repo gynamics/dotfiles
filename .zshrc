@@ -134,11 +134,10 @@ fi
 # https proxy
 export https_proxy=http://127.0.0.1:8889/
 
-# script forks
+# personal script forks
 ZSH_SCRIPT_DIR="${HOME}/.zsh-scripts"
 source $ZSH_SCRIPT_DIR/dirstack.zsh
 source $ZSH_SCRIPT_DIR/gitneko.zsh
-source $ZSH_SCRIPT_DIR/setwallpaper.zsh
 
 # setup develop environments dynamically
 ghc-setup-env(){  . "$HOME/.ghcup/env" }
